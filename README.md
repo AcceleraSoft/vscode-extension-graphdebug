@@ -1,65 +1,26 @@
-# visual-debug README
+Visual Debugger for VSCode
+==========================
 
-This is the README for your extension "visual-debug". After writing up a brief description, we recommend including the following sections.
+This is an experimental extension for VSCode allowing you to plot your running
+program as a complex graph, enabling you to filter, inspect and modify your
+program on-the-fly.
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+Eventually, the extension will support the following features:
 
-For example if there is an image subfolder under your extension project workspace:
-
-\!\[feature X\]\(images/feature-x.png\)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
-
-## Requirements
-
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
-
-## Extension Settings
-
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
+ - Plot your program state in a dynamic graph, with the ability to expand nodes and move parts of the graph.
+ - A fuzzy finder that automatically slims down the graph to only contain the matching results.
+ - Ability to edit values in the graph itself.
 
 ## Known Issues
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+This extension is experimental and things might not fully work yet, or the
+extension may just not work in its entirity. Until the first version comes
+out, there are no guarantees about the stability.
 
-## Release Notes
+## License
 
-Users appreciate release notes as you update your extension.
+This software is GNU-licensed, because I put a lot of work into making this
+extension and I want the open-source nature of it to be preserved.
 
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
------------------------------------------------------------------------------------------------------------
-
-## Working with Markdown
-
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (macOS) to see a list of Markdown snippets
-
-### For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
