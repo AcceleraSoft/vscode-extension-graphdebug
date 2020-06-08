@@ -13,22 +13,24 @@ const configs = [
     target: 'node',
     entry: './src/extension.ts',
   }
-]
+];
 
 module.exports = configs.map(config => merge(config, {
   output: {
     filename: stripExtensions(config.entry) + '.js',
     path: path.resolve(__dirname, 'dist'),
+    libraryTarget: 'commonjs2',
+    devtoolModuleFilenameTemplate: '../[resource-path]'
   },
   externals: {
-    'vscode': 'require("vscode")',
+    'vscode': 'commonjs vscode',
   },
   resolve: {
     extensions: [".ts", ".js"],
   },
   module: {
     rules: [
-      { test: /\.ts$/, loader: "ts-loader", options: { transpileOnly: true } },
+      { test: /\.ts$/, exclude: /node_modules/, loader: "ts-loader", options: { transpileOnly: true } },
       { test: /\.m?js$/, exclude: /node_modules/, loader: 'babel-loader' },
     ]
   }

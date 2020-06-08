@@ -1,0 +1,4 @@
+# ignore every directory in this directory
+# because extensions will be installed
+# on a per-user basis
+*/
