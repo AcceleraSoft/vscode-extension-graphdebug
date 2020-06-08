@@ -18,7 +18,7 @@
 		"url": "https://github.com/boltlang/vscode-visual-debug-extension.git"
 	},
 	"license": "GPL-3.0",
-	"main": "./dist/extension.min.js",
+	"main": "./dist/extension.js",
 	"contributes": {
 		"customEditors": [
 			{
