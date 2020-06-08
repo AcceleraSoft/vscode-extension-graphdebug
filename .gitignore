@@ -1,4 +1,10 @@
-out
-node_modules
+
+# all resulting assets go here
+/dist/
+
+# used by npm
+node_modules/
+
+# maintained by VSCode tooling
 .vscode-test/
 *.vsix
