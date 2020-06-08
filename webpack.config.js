@@ -7,7 +7,7 @@ const merge = require('webpack-merge');
 const configs = [
   {
     target: 'web',
-    entry: './src/debugGraph.ts',
+    entry: './src/debugGraphScript.ts',
   },
   {
     target: 'node',
@@ -17,10 +17,12 @@ const configs = [
 
 module.exports = configs.map(config => merge(config, {
   output: {
-    filename: path.basename(config.entry),
+    filename: stripExtensions(config.entry) + '.js',
     path: path.resolve(__dirname, 'dist'),
   },
-  externals: ['vscode'],
+  externals: {
+    'vscode': 'require("vscode")',
+  },
   resolve: {
     extensions: [".ts", ".js"],
   },
@@ -31,4 +33,17 @@ module.exports = configs.map(config => merge(config, {
     ]
   }
 }));
+
+
+function stripExtensions(filepath) {
+  const basename = path.basename(filepath);
+  const i = basename.indexOf('.');
+  if (i === -1) {
+    return basename;
+  }
+  if (i === 1) {
+    return basename.substring(1);
+  }
+  return basename.substring(0, i);
+}
 
